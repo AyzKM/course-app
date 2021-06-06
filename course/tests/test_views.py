@@ -1,9 +1,6 @@
 from rest_framework import status
-from django.http import response
 from django.test import TestCase
-# from rest_framework.test import APIself.Client
 from django.urls import reverse
-import json
 from course.models import Course, Category
 from course.serializers import CourseSerializer
 

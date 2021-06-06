@@ -1,6 +1,6 @@
 from django.test import TestCase
-from course import serializers, models
-from course.models import Course, Branch, Category, Contact
+from course import serializers
+from course.models import Course, Category
 
 class CourseSerializerTest(TestCase):
     def setUp(self):
