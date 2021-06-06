@@ -21,12 +21,17 @@ class DetailCourseView(APIView):
 
 class CourseCreateAPIView(APIView):
     def post(self, request, *args, **kwargs):
-        data = request.POST
-        serializer = CourseSerializer(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(data={'message': 'Course has been added successfully'}, status=201)
-        return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if self.request.method == 'GET':
+            course = Course.objects.all()
+            serializer = CourseSerializer(course, many=True)
+            return Response(serializer.data)
+        elif self.request.method == "POST":
+            data = self.request.data
+            serializer = CourseSerializer(data=data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(data={'message': 'Course has been added successfully'}, status=status.HTTP_201_CREATED)
+            return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class CourseDeleteAPIView(APIView):
     def delete(self, request, *args, **kwargs):

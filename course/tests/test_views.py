@@ -60,5 +60,5 @@ class CourseViewsTestCase(TestCase):
 
 #not working
     def test_create_view_success(self):
-        response = client.post(reverse('course-create'), data=json.dumps(self.valid_data), content_type='application/json')
+        response = self.client.post(reverse('course-create'), data=json.dumps(self.valid_data), content_type='application/json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)

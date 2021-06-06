@@ -28,14 +28,14 @@ class CourseSerializer(serializers.ModelSerializer):
         fields = ["name", "description", "category", "logo", "contacts","branches"]
 
     def create(self, validated_data):
-        contact = validated_data.pop('contacts')
-        branch = validated_data.pop('branches')
+        contacts = validated_data.pop('contacts')
+        branches = validated_data.pop('branches')
         course = Course.objects.create(**validated_data)
 
-        for contact in contact:
-            Contact.objects.create(course = course, **contact)
-        for branch in branch:
-            Branch.objects.create(course = course, **branch)
+        for contact in contacts:
+            Contact.objects.create(course=course, **contact)
+        for branch in branches:
+            Branch.objects.create(course=course, **branch)
         return course
 
 
