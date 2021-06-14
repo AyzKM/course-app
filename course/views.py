@@ -37,4 +37,4 @@ class CourseDeleteAPIView(APIView):
     def delete(self, request, *args, **kwargs):
         course = Course.objects.get(pk=kwargs.get('pk'))
         course.delete()
-        return Response(data={'message': 'Course has been successfully deletes'}, status=status.HTTP_204_NO_CONTENT)
+        return Response(data={'message': 'Course has been successfully deleted'}, status=status.HTTP_204_NO_CONTENT)
