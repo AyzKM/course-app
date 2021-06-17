@@ -56,6 +56,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'course_app.urls'
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -83,8 +90,8 @@ DATABASE_URL = os.environ['DATABASE_URL']
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 DATABASES = {
-    'default':{
-        
+    'default': {
+
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
