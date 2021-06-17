@@ -90,8 +90,6 @@ DATABASE_URL = os.environ['DATABASE_URL']
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-DISABLE_COLLECTSTATIC=1
-
 DATABASES = {
     'default': {
 
