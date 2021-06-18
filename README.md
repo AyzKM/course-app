@@ -39,6 +39,7 @@ Now run server (localhost).
 python manage.py runserver
 ```
 Homepage (list of all courses) http://127.0.0.1:8000/courses/ 
+
 Detail view of course http://127.0.0.1:8000/courses/{course id}
 
 ## Documentation
@@ -57,4 +58,4 @@ Deployed to Heroku
 
 List of all courses: courses/ (https://neobiscoursesapp.herokuapp.com/courses/)
 
-Detail view of course: courses/course_id (https://neobiscoursesapp.herokuapp.com/courses/1/)
+Detail view of course: courses/{course_id} (https://neobiscoursesapp.herokuapp.com/courses/1/)
