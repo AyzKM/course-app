@@ -38,24 +38,24 @@ Now run server (localhost).
 ```bash
 python manage.py runserver
 ```
-Homepage (list of all courses) http://127.0.0.1:8000/courses/ 
+Homepage (list of all courses): http://127.0.0.1:8000/courses/ 
 
-Detail view of course http://127.0.0.1:8000/courses/{course id}
+Detail view of course: http://127.0.0.1:8000/courses/{course_id}
 
 ## Documentation
 
-Courses Application's API (https://courses27.docs.apiary.io/#)
+Courses Application's API: https://courses27.docs.apiary.io/#
 
 APIs for:
 
-Course List (https://courses27.docs.apiary.io/#reference/0/courses-collection/list-of-all-courses)
+Course List: https://courses27.docs.apiary.io/#reference/0/courses-collection/list-of-all-courses
 
-Course Detail (https://courses27.docs.apiary.io/#reference/0/one-course-info/view-of-a-course-detail)
+Course Detail: https://courses27.docs.apiary.io/#reference/0/one-course-info/view-of-a-course-detail
 
 ## Deployment
 
 Deployed to Heroku
 
-List of all courses: courses/ (https://neobiscoursesapp.herokuapp.com/courses/)
+List of all courses: courses/ https://neobiscoursesapp.herokuapp.com/courses/
 
-Detail view of course: courses/{course_id} (https://neobiscoursesapp.herokuapp.com/courses/1/)
+Detail view of course: courses/{course_id} https://neobiscoursesapp.herokuapp.com/courses/1/
